@@ -108,6 +108,26 @@ http://127.0.0.1:8000
 - Service History Reports
 - PDF Invoice Download
 
+## 📸 Screenshots
+
+### Home Page
+
+![Home](screenshots/home.png)
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Login
+
+![Login](screenshots/login.png)
+
+### Register
+![Register](screenshots/register.png)
+### Admin Panel
+
+![Admin](screenshots/admin.png)
+
 ---
 
 ## 👨‍💻 Author
