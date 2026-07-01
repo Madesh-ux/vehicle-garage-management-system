@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+View Bookings
+{% endblock %}
+
+{% block content %}
+
+<h2>My Bookings</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Vehicle</th>
+        <th>Service</th>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+
+    <th>Action</th>
+
+    {% for booking in bookings %}
+    <td>
+        <a href="/bookings/cancel/{{ booking.id }}/"
+        class="btn btn-danger btn-sm">
+            Cancel
+        </a>
+    </td>
+        <a href="/bookings/invoice/{{ booking.id }}/"
+        class="btn btn-primary btn-sm">
+            Invoice
+        </a>
+
+
+    <tr>
+        <td>{{ booking.vehicle }}</td>
+        <td>{{ booking.service_type }}</td>
+        <td>{{ booking.booking_date }}</td>
+        <td>{{ booking.status }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+My Vehicles
+{% endblock %}
+
+{% block content %}
+
+<h2>My Vehicles</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Vehicle Number</th>
+        <th>Company</th>
+        <th>Model</th>
+        <th>Fuel Type</th>
+    </tr>
+
+    <th>Actions</th>
+
+    {% for vehicle in vehicles %}
+
+    <td>
+        <a href="/vehicles/edit/{{ vehicle.id }}/" class="btn btn-warning btn-sm">
+            Edit
+        </a>
+        <a href="/vehicles/delete/{{ vehicle.id }}/" class="btn btn-danger btn-sm">
+            Delete
+        </a>
+    </td>
+
+    <tr>
+        <td>{{ vehicle.vehicle_number }}</td>
+        <td>{{ vehicle.company }}</td>
+        <td>{{ vehicle.model }}</td>
+        <td>{{ vehicle.fuel_type }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}
